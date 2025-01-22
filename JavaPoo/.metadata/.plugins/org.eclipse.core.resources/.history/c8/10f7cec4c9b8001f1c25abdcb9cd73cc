@@ -1,0 +1,110 @@
+package com.loiane.cursojava.aula20.labs;
+
+import java.util.Scanner;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		//declaration array and variable
+		String[][] olderGame = new String[3][3];
+		int count = 1;
+		int player = 0;		
+		boolean won = false;
+		int move = 1;
+		String signal = " ";
+		int row = 0;
+		int column = 0;
+		
+		//methods
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println();
+		for(int i = 0; i < olderGame.length; i++) {			
+			for(int j = 0; j < olderGame[i].length; j++) {
+				System.out.print("\t  " + count);
+				count++;
+				if(j < 2) {
+					System.out.print("   |");
+				}				
+			}
+			if(i < 2) {
+				System.out.println("\n\t---------------------");
+			}
+			
+		}
+		System.out.println("\n\n\tLets play!\n\n");
+		
+		while(!won) {
+			if(move % 2 != 0) {
+				System.out.println("Player 1[X]: ");
+				signal = "X";
+				
+			} else {
+				System.out.println("Player 2[O]: ");
+				signal = "O";
+				
+			}
+		
+			
+			
+		
+		boolean validRow = false;
+		while(!validRow) {
+			System.out.print("Enter row[1 - 3]: ");	
+			row = scan.nextInt();
+			if(row >= 1 && row <= 3) {
+				validRow = true;
+			} else {
+				System.out.print("Enter valid row[1 - 3]: ");
+				
+			}
+		}
+
+		boolean validColumn = false;
+		while(!validColumn) {
+			System.out.print("Enter column[1 - 3]: ");	
+			column = scan.nextInt();
+			if(column >= 1 && column <= 3) {
+				validColumn = true;
+			} else {
+				System.out.print("Enter valid column[1 - 3]: ");
+				
+			}
+		}
+		
+		column--;
+		row--;
+		
+		if(olderGame[row][column] == "X" || olderGame[row][column] == "O") {
+			System.out.println("Move used. Try another position.");
+		} else {
+			olderGame[row][column] = signal;
+			move++;
+		}
+		
+		//print table
+		
+		System.out.println();
+		for(int i = 0; i < olderGame.length; i++) {			
+			for(int j = 0; j < olderGame[i].length; j++) {
+				System.out.print("\t  " + olderGame[i][j]);
+				
+				if(j < 2) {
+					System.out.print("   |");
+				}				
+			}
+			if(i < 2) {
+				System.out.println("\n\t---------------------");
+			}
+			
+		}
+		
+		
+		
+		
+		}
+		scan.close();
+
+	}
+
+}

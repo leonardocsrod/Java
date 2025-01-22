@@ -1,0 +1,29 @@
+package com.loiane.cursojava.aula20.labs;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		//declaration array and variable
+		int[][] olderGame = new int[3][3];
+		int count = 1;
+		
+		System.out.println();
+		for(int i = 0; i < olderGame.length; i++) {			
+			for(int j = 0; j < olderGame[i].length; j++) {
+				System.out.print("\t  " + count);
+				count++;
+				if(j < 2) {
+					System.out.print("   |");
+				}				
+			}
+			if(i < 2) {
+				System.out.println("\n\t---------------------");
+			}
+			
+		}
+		System.out.println("Lets play!");
+		
+
+	}
+
+}

@@ -1,0 +1,57 @@
+package com.loiane.cursojava.aula20.labs;
+
+import java.util.Scanner;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		//declaration array and variable
+		String[][] olderGame = new String[3][3];
+		int count = 1;
+		int player1 = 0;
+		int player2 = 0;
+		
+		//methods
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println();
+		for(int i = 0; i < olderGame.length; i++) {			
+			for(int j = 0; j < olderGame[i].length; j++) {
+				System.out.print("\t  " + count);
+				count++;
+				if(j < 2) {
+					System.out.print("   |");
+				}				
+			}
+			if(i < 2) {
+				System.out.println("\n\t---------------------");
+			}
+			
+		}
+		System.out.println("\n\n\tLets play!\n\n");
+		
+		System.out.print("\tPlayer 1[X]: ");
+		player1 = scan.nextInt();
+		switch(player1) {
+		case 1: olderGame[0][0] = "X"; break;
+		case 2: olderGame[0][0] = "X"; break;
+		case 3: olderGame[0][0] = "X"; break;
+		case 4: olderGame[0][0] = "X"; break;
+		case 5: olderGame[0][0] = "X"; break;
+		case 6: olderGame[0][0] = "X"; break;
+		case 7: olderGame[0][0] = "X"; break;
+		case 8: olderGame[0][0] = "X"; break;
+		case 9: olderGame[0][0] = "X"; break;
+		default: System.out.println("\tchoose [1 - 9], try again!");
+			     player1 = scan.nextInt();
+		}
+		
+		System.out.print("\tPlayer 2[O]: ");
+		player2 = scan.nextInt();
+		
+		
+		scan.close();
+
+	}
+
+}
