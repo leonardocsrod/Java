@@ -5,14 +5,11 @@ import java.util.Scanner;
 public class Exer13 {
 	
 	static int contaDigito(int numero) {
-		int cont = 0;
-		for(int i = 10; i <= numero; i *= 10) {
-			cont++;
-			if(numero % i < 1) {
-				break;
-			}			
+		if(numero < 10) {
+			return 1;
 		}
-		return cont;
+		
+		return 1 + contaDigito(numero / 10);
 	}
 
 	public static void main(String[] args) {
@@ -23,14 +20,10 @@ public class Exer13 {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Número: ");
 		int numero = scan.nextInt();
-		int cont = 0;
-		for(int i = 10; i <= numero; i *= 10) {
-			cont++;
-			if(numero / i < 1) {
-				break;
-			}			
-		}
-		System.out.println("Cont: " + (cont + 1));
+		
+		int resultado = contaDigito(numero);
+		
+		System.out.println("Cont: " + resultado);
 		scan.close();
 
 	}
