@@ -1,6 +1,6 @@
 package com.loiane.cursojava.aula54;
 
-import parte_2.Exer36.diaSemana;
+//import parte_2.Exer36.diaSemana;
 
 public class Teste {
 
