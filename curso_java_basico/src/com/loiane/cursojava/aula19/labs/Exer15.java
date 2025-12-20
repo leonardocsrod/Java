@@ -8,7 +8,7 @@ public class Exer15 {
 		Scanner scan = new Scanner(System.in);
 		int[] vetorA = new int[10];
 		float contaPar = 0;
-		float contaImpar = 0;
+		//float contaImpar = 0;
 		float percentPar = 0;
 		float percentImpar = 0;
 		
@@ -19,7 +19,7 @@ public class Exer15 {
 			if(vetorA[i] % 2 == 0) {
 				contaPar++;
 			} else {
-				contaImpar++;
+				//contaImpar++;
 			}
 		}
 		
