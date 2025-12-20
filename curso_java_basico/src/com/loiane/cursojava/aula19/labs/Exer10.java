@@ -26,7 +26,7 @@ public class Exer10 {
 			vetorB[i] = scan.nextInt();
 		}	
 		
-		//preenche vetorB
+		//preenche vetorC
 		System.out.println();		
 		for(int i = 0; i < vetorB.length; i++) {
 			vetorC[i] = vetorA[i] % vetorB[i];
