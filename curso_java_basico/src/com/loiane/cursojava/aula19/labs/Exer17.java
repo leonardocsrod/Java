@@ -2,41 +2,39 @@ package com.loiane.cursojava.aula19.labs;
 
 import java.util.Scanner;
 
-public class Exer16 {
+public class Exer17 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int[] vetorA = new int[10];
-		int somaMeno15 = 0;
-		
-		//fill vetorA
+		int soma35plus = 0;
+				
+		//create vetor
 		for(int i = 0; i < vetorA.length; i++) {
-			System.out.print("vetorA[" + i + "]: ");
+			System.out.print("Vetor[" + i + "]: ");
 			vetorA[i] = scan.nextInt();
-			if(vetorA[i] < 15) {
-				somaMeno15 += vetorA[i];
+			if(vetorA[i] > 35) {
+				soma35plus++;
 			}
 		}
 		
-		//print vetorA
+		//print vetor
+		System.out.println();
 		for(int i = 0; i < vetorA.length; i++) {
 			if(i == 0) {
-				System.out.print("\nvetorA = {" + vetorA[i] + ", ");
-			} else if(i > 0 && i < vetorA.length - 1) {
+				System.out.print("VetorA[" + i + "]: " + vetorA[i] + ", ");
+			} else if(i > 0 && i < (vetorA.length - 1)) {
 				System.out.print(vetorA[i] + ", ");
 			} else {
 				System.out.print(vetorA[i] + "}");
 			}
+			
 		}
-		System.out.println();
-		System.out.println("Soma de elementos do vetorA menores que 15: " + somaMeno15);
-		
+		System.out.println("\nA quantidade de pessoas com idade maior que 38 é: " + soma35plus);
 		scan.close();
-		
-		
-		
-		
-		scan.close();
+				
+				
+
 	}
 
 }
